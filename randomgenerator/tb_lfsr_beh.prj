@@ -1,0 +1,8 @@
+verilog work "sevenseg.v"
+verilog work "digitdisp.v"
+verilog work "top_digital.v"
+verilog work "randgen.v"
+verilog work "LEDdisp.v"
+verilog work "top_rand.v"
+verilog work "randgen_tb.v"
+verilog work "D:/ISE/14.7/ISE_DS/ISE//verilog/src/glbl.v"

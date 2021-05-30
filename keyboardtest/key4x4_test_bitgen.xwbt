@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\whackamole\keyboardtest\key4x4_test.ncd
+OUTFILE=D:\whackamole\keyboardtest\key4x4_test.bit
+FAMILY=Spartan6
+PART=xc6slx9-2ftg256
+WORKINGDIR=D:\whackamole\keyboardtest
+LICENSE=WebPack
+USER_INFO=__0_0_0

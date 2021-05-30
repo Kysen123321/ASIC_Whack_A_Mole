@@ -1,0 +1,4 @@
+verilog isim_temp "randgen.v"
+verilog isim_temp "LEDdisp.v"
+verilog isim_temp "top_rand.v"
+verilog isim_temp "D:/ISE/14.7/ISE_DS/ISE//verilog/src/glbl.v"

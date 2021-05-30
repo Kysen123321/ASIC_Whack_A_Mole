@@ -1,0 +1,76 @@
+xst -intstyle ise -ifn "D:/whackamole/test4/top_game.xst" -ofn "D:/whackamole/test4/top_game.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc6slx9-ftg256-2 top_game.ngc top_game.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o top_game_map.ncd top_game.ngd top_game.pcf 
+par -w -intstyle ise -ol high -mt off top_game_map.ncd top_game.ncd top_game.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml top_game.twx top_game.ncd -o top_game.twr top_game.pcf -ucf test.ucf 
+xst -intstyle ise -ifn "D:/whackamole/test4/top_game.xst" -ofn "D:/whackamole/test4/top_game.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc6slx9-ftg256-2 top_game.ngc top_game.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o top_game_map.ncd top_game.ngd top_game.pcf 
+par -w -intstyle ise -ol high -mt off top_game_map.ncd top_game.ncd top_game.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml top_game.twx top_game.ncd -o top_game.twr top_game.pcf -ucf test.ucf 
+bitgen -intstyle ise -f top_game.ut top_game.ncd 
+xst -intstyle ise -ifn "D:/whackamole/test4/top_game.xst" -ofn "D:/whackamole/test4/top_game.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc6slx9-ftg256-2 top_game.ngc top_game.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o top_game_map.ncd top_game.ngd top_game.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc6slx9-ftg256-2 top_game.ngc top_game.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o top_game_map.ncd top_game.ngd top_game.pcf 
+par -w -intstyle ise -ol high -mt off top_game_map.ncd top_game.ncd top_game.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml top_game.twx top_game.ncd -o top_game.twr top_game.pcf -ucf test.ucf 
+xst -intstyle ise -ifn "D:/whackamole/test4/top_game.xst" -ofn "D:/whackamole/test4/top_game.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc6slx9-ftg256-2 top_game.ngc top_game.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o top_game_map.ncd top_game.ngd top_game.pcf 
+par -w -intstyle ise -ol high -mt off top_game_map.ncd top_game.ncd top_game.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml top_game.twx top_game.ncd -o top_game.twr top_game.pcf -ucf test.ucf 
+bitgen -intstyle ise -f top_game.ut top_game.ncd 
+xst -intstyle ise -ifn "D:/whackamole/test4/top_game.xst" -ofn "D:/whackamole/test4/top_game.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc6slx9-ftg256-2 top_game.ngc top_game.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o top_game_map.ncd top_game.ngd top_game.pcf 
+par -w -intstyle ise -ol high -mt off top_game_map.ncd top_game.ncd top_game.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml top_game.twx top_game.ncd -o top_game.twr top_game.pcf -ucf test.ucf 
+bitgen -intstyle ise -f top_game.ut top_game.ncd 
+xst -intstyle ise -ifn "D:/whackamole/test4/top_game.xst" -ofn "D:/whackamole/test4/top_game.syr" 
+xst -intstyle ise -ifn "D:/whackamole/test4/top_game.xst" -ofn "D:/whackamole/test4/top_game.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc6slx9-ftg256-2 top_game.ngc top_game.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o top_game_map.ncd top_game.ngd top_game.pcf 
+par -w -intstyle ise -ol high -mt off top_game_map.ncd top_game.ncd top_game.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml top_game.twx top_game.ncd -o top_game.twr top_game.pcf -ucf test.ucf 
+bitgen -intstyle ise -f top_game.ut top_game.ncd 
+xst -intstyle ise -ifn "D:/whackamole/test4/top_game.xst" -ofn "D:/whackamole/test4/top_game.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc6slx9-ftg256-2 top_game.ngc top_game.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o top_game_map.ncd top_game.ngd top_game.pcf 
+par -w -intstyle ise -ol high -mt off top_game_map.ncd top_game.ncd top_game.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml top_game.twx top_game.ncd -o top_game.twr top_game.pcf -ucf test.ucf 
+bitgen -intstyle ise -f top_game.ut top_game.ncd 
+xst -intstyle ise -ifn "D:/whackamole/test4/top_game.xst" -ofn "D:/whackamole/test4/top_game.syr" 
+xst -intstyle ise -ifn "D:/whackamole/test4/top_game.xst" -ofn "D:/whackamole/test4/top_game.syr" 
+xst -intstyle ise -ifn "D:/whackamole/test4/top_game.xst" -ofn "D:/whackamole/test4/top_game.syr" 
+xst -intstyle ise -ifn "D:/whackamole/test4/top_game.xst" -ofn "D:/whackamole/test4/top_game.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc6slx9-ftg256-2 top_game.ngc top_game.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o top_game_map.ncd top_game.ngd top_game.pcf 
+par -w -intstyle ise -ol high -mt off top_game_map.ncd top_game.ncd top_game.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml top_game.twx top_game.ncd -o top_game.twr top_game.pcf -ucf test.ucf 
+bitgen -intstyle ise -f top_game.ut top_game.ncd 
+xst -intstyle ise -ifn "D:/whackamole/test4/top_game.xst" -ofn "D:/whackamole/test4/top_game.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc6slx9-ftg256-2 top_game.ngc top_game.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o top_game_map.ncd top_game.ngd top_game.pcf 
+par -w -intstyle ise -ol high -mt off top_game_map.ncd top_game.ncd top_game.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml top_game.twx top_game.ncd -o top_game.twr top_game.pcf -ucf test.ucf 
+bitgen -intstyle ise -f top_game.ut top_game.ncd 
+xst -intstyle ise -ifn "D:/whackamole/test4/top_game.xst" -ofn "D:/whackamole/test4/top_game.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc6slx9-ftg256-2 top_game.ngc top_game.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o top_game_map.ncd top_game.ngd top_game.pcf 
+par -w -intstyle ise -ol high -mt off top_game_map.ncd top_game.ncd top_game.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml top_game.twx top_game.ncd -o top_game.twr top_game.pcf -ucf test.ucf 
+bitgen -intstyle ise -f top_game.ut top_game.ncd 
+xst -intstyle ise -ifn "D:/whackamole/test4/top_game.xst" -ofn "D:/whackamole/test4/top_game.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc6slx9-ftg256-2 top_game.ngc top_game.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o top_game_map.ncd top_game.ngd top_game.pcf 
+par -w -intstyle ise -ol high -mt off top_game_map.ncd top_game.ncd top_game.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml top_game.twx top_game.ncd -o top_game.twr top_game.pcf -ucf test.ucf 
+bitgen -intstyle ise -f top_game.ut top_game.ncd 
+xst -intstyle ise -ifn "D:/whackamole/test4/top_game.xst" -ofn "D:/whackamole/test4/top_game.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc6slx9-ftg256-2 top_game.ngc top_game.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o top_game_map.ncd top_game.ngd top_game.pcf 
+par -w -intstyle ise -ol high -mt off top_game_map.ncd top_game.ncd top_game.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml top_game.twx top_game.ncd -o top_game.twr top_game.pcf -ucf test.ucf 
+bitgen -intstyle ise -f top_game.ut top_game.ncd 

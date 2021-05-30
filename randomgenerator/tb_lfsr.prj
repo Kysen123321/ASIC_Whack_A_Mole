@@ -1,0 +1,7 @@
+verilog work "sevenseg.v"
+verilog work "digitdisp.v"
+verilog work "top_digital.v"
+verilog work "randgen.v"
+verilog work "LEDdisp.v"
+verilog work "top_rand.v"
+verilog work "randgen_tb.v"

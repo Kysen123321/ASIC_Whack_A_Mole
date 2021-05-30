@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "D:/whackamole/randomgenerator/tb_lfsr_isim_beh.exe" -prj "D:/whackamole/randomgenerator/tb_lfsr_beh.prj" "work.tb_lfsr" "work.glbl" 

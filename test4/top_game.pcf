@@ -1,0 +1,76 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun May 30 22:55:16 2021
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "T8" LEVEL 1;
+COMP "bitsig<0>" LOCATE = SITE "D9" LEVEL 1;
+COMP "bitsig<1>" LOCATE = SITE "E10" LEVEL 1;
+COMP "bitsig<2>" LOCATE = SITE "F10" LEVEL 1;
+COMP "bitsig<3>" LOCATE = SITE "F9" LEVEL 1;
+COMP "bitsig<4>" LOCATE = SITE "E8" LEVEL 1;
+COMP "bitsig<5>" LOCATE = SITE "D8" LEVEL 1;
+COMP "reset" LOCATE = SITE "L3" LEVEL 1;
+PIN reset_pin<0> = BEL "reset" PINNAME PAD;
+PIN "reset_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "button<0>" LOCATE = SITE "C3" LEVEL 1;
+COMP "button<1>" LOCATE = SITE "D3" LEVEL 1;
+COMP "button<2>" LOCATE = SITE "E4" LEVEL 1;
+COMP "button<3>" LOCATE = SITE "E3" LEVEL 1;
+COMP "segsig<0>" LOCATE = SITE "C7" LEVEL 1;
+COMP "segsig<1>" LOCATE = SITE "E6" LEVEL 1;
+COMP "segsig<2>" LOCATE = SITE "C5" LEVEL 1;
+COMP "segsig<3>" LOCATE = SITE "F7" LEVEL 1;
+COMP "segsig<4>" LOCATE = SITE "D6" LEVEL 1;
+COMP "segsig<5>" LOCATE = SITE "E7" LEVEL 1;
+COMP "segsig<6>" LOCATE = SITE "D5" LEVEL 1;
+COMP "segsig<7>" LOCATE = SITE "C6" LEVEL 1;
+COMP "dispL<0>" LOCATE = SITE "P4" LEVEL 1;
+COMP "dispL<1>" LOCATE = SITE "N5" LEVEL 1;
+COMP "dispL<2>" LOCATE = SITE "P5" LEVEL 1;
+COMP "dispL<3>" LOCATE = SITE "M6" LEVEL 1;
+TIMEGRP sys_clk_pin = BEL "ld/counter_33" BEL "ld/counter_32" BEL
+        "ld/counter_31" BEL "ld/counter_30" BEL "ld/counter_29" BEL
+        "ld/counter_28" BEL "ld/counter_27" BEL "ld/counter_26" BEL
+        "ld/counter_25" BEL "ld/counter_24" BEL "ld/counter_23" BEL
+        "ld/counter_22" BEL "ld/counter_21" BEL "ld/counter_20" BEL
+        "ld/counter_19" BEL "ld/counter_18" BEL "ld/counter_17" BEL
+        "ld/counter_16" BEL "ld/counter_15" BEL "ld/counter_14" BEL
+        "ld/counter_13" BEL "ld/counter_12" BEL "ld/counter_11" BEL
+        "ld/counter_10" BEL "ld/counter_9" BEL "ld/counter_8" BEL
+        "ld/counter_7" BEL "ld/counter_6" BEL "ld/counter_5" BEL
+        "ld/counter_4" BEL "ld/counter_3" BEL "ld/counter_2" BEL
+        "ld/counter_1" BEL "ld/counter_0" BEL "ld/displayL_FSM_FFd1" BEL
+        "ld/displayL_FSM_FFd2" BEL "ld/displayL_FSM_FFd3" BEL "ld/score_5" BEL
+        "ld/score_4" BEL "ld/score_3" BEL "ld/score_2" BEL "ld/score_1" BEL
+        "ld/score_0" BEL "rn/r_LFSR_6" BEL "rn/r_LFSR_2" BEL "rn/r_LFSR_1" BEL
+        "td/btb/bcd_11" BEL "td/btb/bcd_10" BEL "td/btb/bcd_9" BEL
+        "td/btb/bcd_8" BEL "td/btb/bcd_7" BEL "td/btb/bcd_6" BEL
+        "td/btb/bcd_5" BEL "td/btb/bcd_4" BEL "td/btb/bcd_3" BEL
+        "td/btb/bcd_2" BEL "td/btb/bcd_1" BEL "td/btb/bcd_0" BEL
+        "td/btb/hundreds_3" BEL "td/btb/hundreds_2" BEL "td/btb/hundreds_1"
+        BEL "td/btb/hundreds_0" BEL "td/btb/tens_3" BEL "td/btb/tens_2" BEL
+        "td/btb/tens_1" BEL "td/btb/tens_0" BEL "td/btb/ones_3" BEL
+        "td/btb/ones_2" BEL "td/btb/ones_1" BEL "td/btb/ones_0" BEL
+        "td/btb/counter_2" BEL "td/btb/counter_1" BEL "td/btb/counter_0" BEL
+        "td/dd/segsig_4" BEL "td/dd/counter_31" BEL "td/dd/counter_30" BEL
+        "td/dd/counter_29" BEL "td/dd/counter_28" BEL "td/dd/counter_27" BEL
+        "td/dd/counter_26" BEL "td/dd/counter_25" BEL "td/dd/counter_24" BEL
+        "td/dd/counter_23" BEL "td/dd/counter_22" BEL "td/dd/counter_21" BEL
+        "td/dd/counter_20" BEL "td/dd/counter_19" BEL "td/dd/counter_18" BEL
+        "td/dd/counter_17" BEL "td/dd/counter_16" BEL "td/dd/counter_15" BEL
+        "td/dd/counter_14" BEL "td/dd/counter_13" BEL "td/dd/counter_12" BEL
+        "td/dd/counter_11" BEL "td/dd/counter_10" BEL "td/dd/counter_9" BEL
+        "td/dd/counter_8" BEL "td/dd/counter_7" BEL "td/dd/counter_6" BEL
+        "td/dd/counter_5" BEL "td/dd/counter_4" BEL "td/dd/counter_3" BEL
+        "td/dd/counter_2" BEL "td/dd/counter_1" BEL "td/dd/counter_0" BEL
+        "td/dd/bitsig_5" BEL "td/dd/bitsig_4" BEL "td/dd/bitsig_3" BEL
+        "td/dd/bitsig_0" BEL "ld/flag" BEL "ld/state_1" BEL "ld/state_0" BEL
+        "td/dd/segsig_7" BEL "td/dd/segsig_6" BEL "td/dd/segsig_5" BEL
+        "td/dd/segsig_3" BEL "td/dd/segsig_2" BEL "td/dd/segsig_1" BEL
+        "td/dd/segsig_0" BEL "td/dd/counter_9_1" BEL "td/dd/counter_15_1" BEL
+        "ld/counter_19_1" BEL "clk_BUFGP/BUFG" BEL "rn/Mshreg_r_LFSR_5" BEL
+        "rn/r_LFSR_5";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 50 MHz HIGH 50%;
+SCHEMATIC END;
+

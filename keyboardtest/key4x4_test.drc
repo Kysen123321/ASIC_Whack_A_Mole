@@ -1,0 +1,8 @@
+Release 14.7 Drc P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Sun May 30 21:26:01 2021
+
+drc -z key4x4_test.ncd key4x4_test.pcf
+
+DRC detected 0 errors and 0 warnings.

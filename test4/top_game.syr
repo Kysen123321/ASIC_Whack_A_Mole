@@ -1,0 +1,608 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: top_game.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top_game.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top_game"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-ftg256
+
+---- Source Options
+Top Module Name                    : top_game
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\whackamole\test4\digitdisp.v" into library work
+Parsing module <digitdisp>.
+Analyzing Verilog file "D:\whackamole\test4\bin2BCD.v" into library work
+Parsing module <bin2BCD>.
+Analyzing Verilog file "D:\whackamole\test4\top_digital.v" into library work
+Parsing module <top_digital>.
+Analyzing Verilog file "D:\whackamole\test4\randgen.v" into library work
+Parsing module <LFSR>.
+Analyzing Verilog file "D:\whackamole\test4\LEDdisp.v" into library work
+Parsing module <LEDdisp>.
+Analyzing Verilog file "D:\whackamole\test4\top_game.v" into library work
+Parsing module <top_game>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <top_game>.
+
+Elaborating module <LFSR>.
+
+Elaborating module <LEDdisp>.
+
+Elaborating module <top_digital>.
+
+Elaborating module <bin2BCD>.
+WARNING:HDLCompiler:413 - "D:\whackamole\test4\bin2BCD.v" Line 14: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "D:\whackamole\test4\bin2BCD.v" Line 16: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "D:\whackamole\test4\bin2BCD.v" Line 18: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <digitdisp>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top_game>.
+    Related source file is "D:\whackamole\test4\top_game.v".
+    Summary:
+	no macro.
+Unit <top_game> synthesized.
+
+Synthesizing Unit <LFSR>.
+    Related source file is "D:\whackamole\test4\randgen.v".
+    Found 6-bit register for signal <r_LFSR>.
+    Summary:
+	inferred   6 D-type flip-flop(s).
+Unit <LFSR> synthesized.
+
+Synthesizing Unit <LEDdisp>.
+    Related source file is "D:\whackamole\test4\LEDdisp.v".
+        TWOS = 34'b0000000101111101011110000100000000
+    Found 4-bit register for signal <displayL>.
+    Found 34-bit register for signal <counter>.
+    Found 6-bit register for signal <score>.
+    Found 2-bit register for signal <state>.
+    Found 1-bit register for signal <flag>.
+    Found 1-bit register for signal <start>.
+    Found finite state machine <FSM_0> for signal <displayL>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 69                                             |
+    | Inputs             | 10                                             |
+    | Outputs            | 4                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000                                           |
+    | Power Up State     | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 6-bit adder for signal <score[5]_GND_3_o_add_42_OUT> created at line 90.
+    Found 34-bit adder for signal <counter[33]_GND_3_o_add_50_OUT> created at line 98.
+    Found 34-bit comparator greater for signal <counter[33]_GND_3_o_LessThan_9_o> created at line 36
+    Found 4-bit comparator equal for signal <button[3]_displayL[3]_equal_40_o> created at line 89
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  44 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   1 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <LEDdisp> synthesized.
+
+Synthesizing Unit <top_digital>.
+    Related source file is "D:\whackamole\test4\top_digital.v".
+    Summary:
+	no macro.
+Unit <top_digital> synthesized.
+
+Synthesizing Unit <bin2BCD>.
+    Related source file is "D:\whackamole\test4\bin2BCD.v".
+    Found 12-bit register for signal <bcd>.
+    Found 4-bit register for signal <hundreds>.
+    Found 4-bit register for signal <tens>.
+    Found 4-bit register for signal <ones>.
+    Found 3-bit register for signal <counter>.
+    Found 3-bit subtractor for signal <counter[2]_GND_5_o_sub_17_OUT> created at line 33.
+    Found 4-bit adder for signal <hundreds[3]_GND_5_o_add_1_OUT> created at line 14.
+    Found 4-bit adder for signal <tens[3]_GND_5_o_add_4_OUT> created at line 16.
+    Found 4-bit adder for signal <ones[3]_GND_5_o_add_7_OUT> created at line 18.
+    Found 1-bit 6-to-1 multiplexer for signal <counter[2]_X_5_o_Mux_9_o> created at line 25.
+    Found 4-bit comparator lessequal for signal <n0001> created at line 13
+    Found 4-bit comparator lessequal for signal <n0005> created at line 15
+    Found 4-bit comparator lessequal for signal <n0009> created at line 17
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  27 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred   5 Multiplexer(s).
+Unit <bin2BCD> synthesized.
+
+Synthesizing Unit <digitdisp>.
+    Related source file is "D:\whackamole\test4\digitdisp.v".
+        ONEMS = 32'b00000000000000001100001101010000
+    Found 32-bit register for signal <counter>.
+    Found 6-bit register for signal <bitsig>.
+    Found 8-bit register for signal <segsig>.
+    Found 32-bit adder for signal <counter[31]_GND_6_o_add_8_OUT> created at line 109.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  46 D-type flip-flop(s).
+	inferred  18 Multiplexer(s).
+Unit <digitdisp> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 7
+ 3-bit subtractor                                      : 1
+ 32-bit adder                                          : 1
+ 34-bit adder                                          : 1
+ 4-bit adder                                           : 3
+ 6-bit adder                                           : 1
+# Registers                                            : 14
+ 1-bit register                                        : 2
+ 12-bit register                                       : 1
+ 2-bit register                                        : 1
+ 3-bit register                                        : 1
+ 32-bit register                                       : 1
+ 34-bit register                                       : 1
+ 4-bit register                                        : 3
+ 6-bit register                                        : 3
+ 8-bit register                                        : 1
+# Comparators                                          : 5
+ 34-bit comparator greater                             : 1
+ 4-bit comparator equal                                : 1
+ 4-bit comparator lessequal                            : 3
+# Multiplexers                                         : 24
+ 1-bit 2-to-1 multiplexer                              : 1
+ 1-bit 6-to-1 multiplexer                              : 1
+ 3-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 3
+ 4-bit 2-to-1 multiplexer                              : 3
+ 6-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 14
+# FSMs                                                 : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <LEDdisp>.
+The following registers are absorbed into accumulator <score>: 1 register on signal <score>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <LEDdisp> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 3-bit subtractor                                      : 1
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 3
+# Counters                                             : 1
+ 34-bit up counter                                     : 1
+# Accumulators                                         : 1
+ 6-bit up accumulator                                  : 1
+# Registers                                            : 83
+ Flip-Flops                                            : 83
+# Comparators                                          : 5
+ 34-bit comparator greater                             : 1
+ 4-bit comparator equal                                : 1
+ 4-bit comparator lessequal                            : 3
+# Multiplexers                                         : 23
+ 1-bit 6-to-1 multiplexer                              : 1
+ 3-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 3
+ 4-bit 2-to-1 multiplexer                              : 3
+ 6-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 14
+# FSMs                                                 : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <ld/FSM_0> on signal <displayL[1:3]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 000
+ 0001  | 001
+ 0010  | 010
+ 0100  | 011
+ 1000  | 100
+-------------------
+INFO:Xst:2261 - The FF/Latch <bitsig_0> in Unit <digitdisp> is equivalent to the following 2 FFs/Latches, which will be removed : <bitsig_1> <bitsig_2> 
+
+Optimizing unit <top_game> ...
+
+Optimizing unit <LEDdisp> ...
+
+Optimizing unit <LFSR> ...
+
+Optimizing unit <bin2BCD> ...
+
+Optimizing unit <digitdisp> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top_game, actual ratio is 6.
+FlipFlop ld/counter_19 has been replicated 1 time(s)
+FlipFlop td/dd/counter_15 has been replicated 1 time(s)
+FlipFlop td/dd/counter_9 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <top_game> :
+	Found 3-bit shift register for signal <rn/r_LFSR_5>.
+Unit <top_game> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 124
+ Flip-Flops                                            : 124
+# Shift Registers                                      : 1
+ 3-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top_game.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 441
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 64
+#      LUT2                        : 11
+#      LUT3                        : 20
+#      LUT4                        : 44
+#      LUT5                        : 30
+#      LUT6                        : 119
+#      MUXCY                       : 71
+#      MUXF7                       : 8
+#      VCC                         : 1
+#      XORCY                       : 66
+# FlipFlops/Latches                : 125
+#      FD                          : 5
+#      FD_1                        : 1
+#      FDC                         : 44
+#      FDCE                        : 58
+#      FDE                         : 4
+#      FDR                         : 1
+#      FDRE                        : 12
+# Shift Registers                  : 1
+#      SRLC16E                     : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 23
+#      IBUF                        : 5
+#      OBUF                        : 18
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9ftg256-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             125  out of  11440     1%  
+ Number of Slice LUTs:                  295  out of   5720     5%  
+    Number used as Logic:               294  out of   5720     5%  
+    Number used as Memory:                1  out of   1440     0%  
+       Number used as SRL:                1
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    309
+   Number with an unused Flip Flop:     184  out of    309    59%  
+   Number with an unused LUT:            14  out of    309     4%  
+   Number of fully used LUT-FF pairs:   111  out of    309    35%  
+   Number of unique control sets:        12
+
+IO Utilization: 
+ Number of IOs:                          24
+ Number of bonded IOBs:                  24  out of    186    12%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 125   |
+reset                              | IBUF+BUFG              | 1     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 7.540ns (Maximum Frequency: 132.626MHz)
+   Minimum input arrival time before clock: 5.990ns
+   Maximum output required time after clock: 5.317ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 7.540ns (frequency: 132.626MHz)
+  Total number of paths / destination ports: 7657 / 160
+-------------------------------------------------------------------------
+Delay:               7.540ns (Levels of Logic = 7)
+  Source:            ld/counter_17 (FF)
+  Destination:       ld/displayL_FSM_FFd1 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: ld/counter_17 to ld/displayL_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            16   0.525   1.458  ld/counter_17 (ld/counter_17)
+     LUT4:I0->O            2   0.254   0.726  ld/counter[33]_counter[33]_OR_87_o23 (ld/counter[33]_counter[33]_OR_87_o23)
+     LUT6:I5->O            1   0.254   0.000  ld/counter[33]_counter[33]_OR_87_o24_G (N58)
+     MUXF7:I1->O           1   0.175   0.790  ld/counter[33]_counter[33]_OR_87_o24 (ld/counter[33]_counter[33]_OR_87_o24)
+     LUT6:I4->O            1   0.250   0.790  ld/counter[33]_counter[33]_OR_87_o26 (ld/counter[33]_counter[33]_OR_87_o26)
+     LUT6:I4->O            1   0.250   0.682  ld/counter[33]_counter[33]_OR_87_o32 (ld/counter[33]_counter[33]_OR_87_o32)
+     LUT6:I5->O            4   0.254   0.804  ld/counter[33]_counter[33]_OR_87_o46 (ld/counter[33]_counter[33]_OR_87_o)
+     LUT6:I5->O            1   0.254   0.000  ld/displayL_FSM_FFd2-In1 (ld/displayL_FSM_FFd2-In)
+     FDC:D                     0.074          ld/displayL_FSM_FFd2
+    ----------------------------------------
+    Total                      7.540ns (2.290ns logic, 5.250ns route)
+                                       (30.4% logic, 69.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'reset'
+  Clock period: 3.255ns (frequency: 307.250MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               3.255ns (Levels of Logic = 1)
+  Source:            ld/start (FF)
+  Destination:       ld/start (FF)
+  Source Clock:      reset falling
+  Destination Clock: reset falling
+
+  Data Path: ld/start to ld/start
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q            44   0.525   1.720  ld/start (ld/start)
+     INV:I->O              1   0.255   0.681  ld/start_INV_2_o1_INV_0 (ld/start_INV_2_o)
+     FD_1:D                    0.074          ld/start
+    ----------------------------------------
+    Total                      3.255ns (0.854ns logic, 2.401ns route)
+                                       (26.2% logic, 73.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 220 / 142
+-------------------------------------------------------------------------
+Offset:              5.990ns (Levels of Logic = 5)
+  Source:            button<0> (PAD)
+  Destination:       ld/flag (FF)
+  Destination Clock: clk rising
+
+  Data Path: button<0> to ld/flag
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.328   1.196  button_0_IBUF (button_0_IBUF)
+     LUT5:I0->O            4   0.254   0.804  ld/button[3]_displayL[3]_equal_40_o411 (ld/button[3]_displayL[3]_equal_40_o41)
+     LUT4:I3->O            1   0.254   0.790  ld/_n0145_SW0 (N4)
+     LUT4:I2->O            1   0.250   0.790  ld/_n0145_SW1 (N28)
+     LUT6:I4->O            1   0.250   0.000  ld/flag_glue_set (ld/flag_glue_set)
+     FDR:D                     0.074          ld/flag
+    ----------------------------------------
+    Total                      5.990ns (2.410ns logic, 3.580ns route)
+                                       (40.2% logic, 59.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 21 / 18
+-------------------------------------------------------------------------
+Offset:              5.317ns (Levels of Logic = 2)
+  Source:            ld/displayL_FSM_FFd3 (FF)
+  Destination:       dispL<2> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: ld/displayL_FSM_FFd3 to dispL<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              5   0.525   0.949  ld/displayL_FSM_FFd3 (ld/displayL_FSM_FFd3)
+     LUT2:I0->O            1   0.250   0.681  ld/displayL_displayL[2]1 (dispL_2_OBUF)
+     OBUF:I->O                 2.912          dispL_2_OBUF (dispL<2>)
+    ----------------------------------------
+    Total                      5.317ns (3.687ns logic, 1.630ns route)
+                                       (69.3% logic, 30.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    7.540|         |         |         |
+reset          |         |    5.075|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock reset
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+reset          |         |         |    3.255|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.57 secs
+ 
+--> 
+
+Total memory usage is 4535856 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
