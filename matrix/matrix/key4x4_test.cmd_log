@@ -1,0 +1,36 @@
+xst -intstyle ise -ifn "D:/BaiduNetdiskDownload/AX309/AX309.190525/AX309.190525/01/demo/matrix/key4x4_test.xst" -ofn "D:/BaiduNetdiskDownload/AX309/AX309.190525/AX309.190525/01/demo/matrix/key4x4_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa7a100t-csg324-2I key4x4_test.ngc key4x4_test.ngd  
+map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o key4x4_test_map.ncd key4x4_test.ngd key4x4_test.pcf 
+par -w -intstyle ise -ol high -mt off key4x4_test_map.ncd key4x4_test.ncd key4x4_test.pcf 
+trce -intstyle ise -v 3 -s 2I -n 3 -fastpaths -xml key4x4_test.twx key4x4_test.ncd -o key4x4_test.twr key4x4_test.pcf 
+bitgen -intstyle ise -f key4x4_test.ut key4x4_test.ncd 
+bitgen -intstyle ise -f key4x4_test.ut key4x4_test.ncd 
+xst -intstyle ise -ifn "D:/BaiduNetdiskDownload/AX309/AX309.190525/AX309.190525/01/demo/matrix/key4x4_test.xst" -ofn "D:/BaiduNetdiskDownload/AX309/AX309.190525/AX309.190525/01/demo/matrix/key4x4_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc matrix.ucf -p xc6slx9-ftg256-2 key4x4_test.ngc key4x4_test.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc matrix.ucf -p xc6slx9-ftg256-2 key4x4_test.ngc key4x4_test.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o key4x4_test_map.ncd key4x4_test.ngd key4x4_test.pcf 
+par -w -intstyle ise -ol high -mt off key4x4_test_map.ncd key4x4_test.ncd key4x4_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml key4x4_test.twx key4x4_test.ncd -o key4x4_test.twr key4x4_test.pcf -ucf matrix.ucf 
+bitgen -intstyle ise -f key4x4_test.ut key4x4_test.ncd 
+xst -intstyle ise -ifn "D:/BaiduNetdiskDownload/AX309/AX309.190525/AX309.190525/01/demo/matrix/key4x4_test.xst" -ofn "D:/BaiduNetdiskDownload/AX309/AX309.190525/AX309.190525/01/demo/matrix/key4x4_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc matrix.ucf -p xc6slx9-ftg256-2 key4x4_test.ngc key4x4_test.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o key4x4_test_map.ncd key4x4_test.ngd key4x4_test.pcf 
+par -w -intstyle ise -ol high -mt off key4x4_test_map.ncd key4x4_test.ncd key4x4_test.pcf 
+bitgen -intstyle ise -f key4x4_test.ut key4x4_test.ncd 
+xst -intstyle ise -ifn "D:/BaiduNetdiskDownload/AX309/AX309.190525/AX309.190525/01/demo/matrix/key4x4_test.xst" -ofn "D:/BaiduNetdiskDownload/AX309/AX309.190525/AX309.190525/01/demo/matrix/key4x4_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc matrix.ucf -p xc6slx9-ftg256-2 key4x4_test.ngc key4x4_test.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o key4x4_test_map.ncd key4x4_test.ngd key4x4_test.pcf 
+par -w -intstyle ise -ol high -mt off key4x4_test_map.ncd key4x4_test.ncd key4x4_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml key4x4_test.twx key4x4_test.ncd -o key4x4_test.twr key4x4_test.pcf -ucf matrix.ucf 
+bitgen -intstyle ise -f key4x4_test.ut key4x4_test.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc matrix.ucf -p xc6slx9-ftg256-2 key4x4_test.ngc key4x4_test.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o key4x4_test_map.ncd key4x4_test.ngd key4x4_test.pcf 
+par -w -intstyle ise -ol high -mt off key4x4_test_map.ncd key4x4_test.ncd key4x4_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml key4x4_test.twx key4x4_test.ncd -o key4x4_test.twr key4x4_test.pcf -ucf matrix.ucf 
+bitgen -intstyle ise -f key4x4_test.ut key4x4_test.ncd 
+xst -intstyle ise -ifn "D:/whackamole/matrix/matrix/key4x4_test.xst" -ofn "D:/whackamole/matrix/matrix/key4x4_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc matrix.ucf -p xc6slx9-ftg256-2 key4x4_test.ngc key4x4_test.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o key4x4_test_map.ncd key4x4_test.ngd key4x4_test.pcf 
+par -w -intstyle ise -ol high -mt off key4x4_test_map.ncd key4x4_test.ncd key4x4_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml key4x4_test.twx key4x4_test.ncd -o key4x4_test.twr key4x4_test.pcf -ucf matrix.ucf 
+bitgen -intstyle ise -f key4x4_test.ut key4x4_test.ncd 

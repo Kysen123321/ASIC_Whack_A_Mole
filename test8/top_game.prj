@@ -1,0 +1,7 @@
+verilog work "digitdisp.v"
+verilog work "bin2BCD.v"
+verilog work "top_digital.v"
+verilog work "randgen.v"
+verilog work "LEDdisp.v"
+verilog work "key4x4.v"
+verilog work "top_game.v"

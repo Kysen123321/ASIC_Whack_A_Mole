@@ -1,0 +1,38 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon May 31 13:40:11 2021
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "T8" LEVEL 1;
+COMP "led_out<0>" LOCATE = SITE "T12" LEVEL 1;
+COMP "led_out<1>" LOCATE = SITE "R9" LEVEL 1;
+COMP "led_out<2>" LOCATE = SITE "T9" LEVEL 1;
+COMP "led_out<3>" LOCATE = SITE "L8" LEVEL 1;
+COMP "led_out<4>" LOCATE = SITE "T7" LEVEL 1;
+COMP "led_out<5>" LOCATE = SITE "R7" LEVEL 1;
+COMP "led_out<6>" LOCATE = SITE "T6" LEVEL 1;
+COMP "led_out<7>" LOCATE = SITE "T5" LEVEL 1;
+COMP "rst_n" LOCATE = SITE "L3" LEVEL 1;
+COMP "key_in_y<0>" LOCATE = SITE "M16" LEVEL 1;
+COMP "key_out_x<0>" LOCATE = SITE "J16" LEVEL 1;
+COMP "key_in_y<1>" LOCATE = SITE "M15" LEVEL 1;
+COMP "key_out_x<1>" LOCATE = SITE "K16" LEVEL 1;
+COMP "key_in_y<2>" LOCATE = SITE "N16" LEVEL 1;
+COMP "key_out_x<2>" LOCATE = SITE "K15" LEVEL 1;
+COMP "key_in_y<3>" LOCATE = SITE "P16" LEVEL 1;
+COMP "key_out_x<3>" LOCATE = SITE "L16" LEVEL 1;
+TIMEGRP sys_clk_pin = BEL "key_h1_scan_0" BEL "key_h1_scan_1" BEL
+        "key_h1_scan_2" BEL "key_h1_scan_3" BEL "key_h2_scan_0" BEL
+        "key_h2_scan_1" BEL "key_h2_scan_2" BEL "key_h2_scan_3" BEL
+        "key_h1_scan_r_0" BEL "key_h1_scan_r_1" BEL "key_h1_scan_r_2" BEL
+        "key_h1_scan_r_3" BEL "key_h2_scan_r_0" BEL "key_h2_scan_r_1" BEL
+        "key_h2_scan_r_2" BEL "key_h2_scan_r_3" BEL "count_0" BEL "count_1"
+        BEL "count_2" BEL "count_3" BEL "count_4" BEL "count_5" BEL "count_6"
+        BEL "count_7" BEL "count_8" BEL "count_9" BEL "count_10" BEL
+        "count_11" BEL "count_12" BEL "count_13" BEL "count_14" BEL "count_15"
+        BEL "count_16" BEL "count_17" BEL "count_18" BEL "count_19" BEL
+        "key_out_x_0" BEL "key_out_x_1" BEL "key_out_x_2" BEL "key_out_x_3"
+        BEL "count_18_1" BEL "count_18_2" BEL "clk_BUFGP/BUFG";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 50 MHz HIGH 50%;
+SCHEMATIC END;
+

@@ -1,0 +1,40 @@
+NET "clk" LOC = T8 | TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 50000 kHz;
+NET "rst_n" CLOCK_DEDICATED_ROUTE = FALSE;
+##
+NET rst_n                LOC = L3 | IOSTANDARD = "LVCMOS33";         ## reset pushbutton
+########LED Pin define#####################
+NET dispL<0>                LOC = T12 | IOSTANDARD = "LVCMOS33";       ## LED1
+NET dispL<1>                LOC = R9 | IOSTANDARD = "LVCMOS33";       ## LED2
+NET dispL<2>                LOC = T9 | IOSTANDARD = "LVCMOS33";       ## LED3
+NET dispL<3>                LOC = L8 | IOSTANDARD = "LVCMOS33";       ## LED4
+NET dispL<4>                LOC = T7 | IOSTANDARD = "LVCMOS33";       ## LED5
+NET dispL<5>                LOC = R7 | IOSTANDARD = "LVCMOS33";       ## LED6
+NET dispL<6>                LOC = T6 | IOSTANDARD = "LVCMOS33";       ## LED7
+NET dispL<7>                LOC = T5 | IOSTANDARD = "LVCMOS33";       ## LED8
+########KEY Pin define#####################
+NET key_out_x<0>             LOC = J16 | IOSTANDARD = "LVCMOS33";      
+NET key_out_x<1>             LOC = K16 | IOSTANDARD = "LVCMOS33";       
+NET key_out_x<2>             LOC = K15 | IOSTANDARD = "LVCMOS33";       
+NET key_out_x<3>             LOC = L16 | IOSTANDARD = "LVCMOS33";       
+
+
+NET key_in_y<0>              LOC = M16 | IOSTANDARD = "LVCMOS33";       
+NET key_in_y<1>              LOC = M15 | IOSTANDARD = "LVCMOS33";       
+NET key_in_y<2>              LOC = N16 | IOSTANDARD = "LVCMOS33";       
+NET key_in_y<3>              LOC = P16 | IOSTANDARD = "LVCMOS33";       
+########seg pin define#####################
+NET segsig<0>            LOC = C7 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST;
+NET segsig<1>            LOC = E6 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST; 
+NET segsig<2>            LOC = C5 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST;
+NET segsig<3>            LOC = F7 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST;
+NET segsig<4>            LOC = D6 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST;
+NET segsig<5>            LOC = E7 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST;
+NET segsig<6>            LOC = D5 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST;
+NET segsig<7>            LOC = C6 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST; 
+NET bitsig<0>            LOC = D9 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST;
+NET bitsig<1>            LOC = E10 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST;
+NET bitsig<2>            LOC = F10 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST;
+NET bitsig<3>             LOC = F9 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST;
+NET bitsig<4>             LOC = E8 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST;
+NET bitsig<5>             LOC = D8 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST; 
