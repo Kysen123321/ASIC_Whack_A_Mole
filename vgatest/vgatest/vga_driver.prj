@@ -1,0 +1,2 @@
+verilog work "ipcore_dir/pic.v"
+verilog work "vgat.v"

@@ -1,0 +1,60 @@
+NET "clk" LOC = T8 | TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 50000 kHz;
+NET "rst_n" CLOCK_DEDICATED_ROUTE = FALSE;
+##
+NET rst_n                LOC = L3 | IOSTANDARD = "LVCMOS33";         ## reset pushbutton
+########LED Pin define#####################
+NET dispL<0>                LOC = T12 | IOSTANDARD = "LVCMOS33";       ## LED1
+NET dispL<1>                LOC = R9 | IOSTANDARD = "LVCMOS33";       ## LED2
+NET dispL<2>                LOC = T9 | IOSTANDARD = "LVCMOS33";       ## LED3
+NET dispL<3>                LOC = L8 | IOSTANDARD = "LVCMOS33";       ## LED4
+NET dispL<4>                LOC = T7 | IOSTANDARD = "LVCMOS33";       ## LED5
+NET dispL<5>                LOC = R7 | IOSTANDARD = "LVCMOS33";       ## LED6
+NET dispL<6>                LOC = T6 | IOSTANDARD = "LVCMOS33";       ## LED7
+NET dispL<7>                LOC = T5 | IOSTANDARD = "LVCMOS33";       ## LED8
+########KEY Pin define#####################
+NET key_out_x<0>             LOC = J16 | IOSTANDARD = "LVCMOS33";      
+NET key_out_x<1>             LOC = K16 | IOSTANDARD = "LVCMOS33";       
+NET key_out_x<2>             LOC = K15 | IOSTANDARD = "LVCMOS33";       
+NET key_out_x<3>             LOC = L16 | IOSTANDARD = "LVCMOS33";       
+
+
+NET key_in_y<0>              LOC = M16 | IOSTANDARD = "LVCMOS33";       
+NET key_in_y<1>              LOC = M15 | IOSTANDARD = "LVCMOS33";       
+NET key_in_y<2>              LOC = N16 | IOSTANDARD = "LVCMOS33";       
+NET key_in_y<3>              LOC = P16 | IOSTANDARD = "LVCMOS33";       
+########seg pin define#####################
+NET segsig<0>            LOC = C7 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST;
+NET segsig<1>            LOC = E6 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST; 
+NET segsig<2>            LOC = C5 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST;
+NET segsig<3>            LOC = F7 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST;
+NET segsig<4>            LOC = D6 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST;
+NET segsig<5>            LOC = E7 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST;
+NET segsig<6>            LOC = D5 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST;
+NET segsig<7>            LOC = C6 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST; 
+NET bitsig<0>            LOC = D9 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST;
+NET bitsig<1>            LOC = E10 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST;
+NET bitsig<2>            LOC = F10 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST;
+NET bitsig<3>             LOC = F9 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST;
+NET bitsig<4>             LOC = E8 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST;
+NET bitsig<5>             LOC = D8 | IOSTANDARD = "LVCMOS33"  | SLEW=FAST; 
+########vga pin define#####################
+NET vga_out_r<4>           LOC = M13 | IOSTANDARD = "LVCMOS33";        ## VGA R4
+NET vga_out_r<3>           LOC = N14 | IOSTANDARD = "LVCMOS33";        ## VGA R3
+NET vga_out_r<2>           LOC = L12 | IOSTANDARD = "LVCMOS33";        ## VGA R2
+NET vga_out_r<1>           LOC = M12 | IOSTANDARD = "LVCMOS33";        ## VGA R1
+NET vga_out_r<0>           LOC = M11 | IOSTANDARD = "LVCMOS33";        ## VGA R0
+NET vga_out_g<5>           LOC = P11 | IOSTANDARD = "LVCMOS33";        ## VGA G4
+NET vga_out_g<4>           LOC = M10 | IOSTANDARD = "LVCMOS33";        ## VGA G4
+NET vga_out_g<3>           LOC = L10 | IOSTANDARD = "LVCMOS33";        ## VGA G3
+NET vga_out_g<2>           LOC = P9 | IOSTANDARD = "LVCMOS33";         ## VGA G2
+NET vga_out_g<1>           LOC = N9 | IOSTANDARD = "LVCMOS33";         ## VGA G1
+NET vga_out_g<0>           LOC = M9 | IOSTANDARD = "LVCMOS33";         ## VGA G0
+NET vga_out_b<4>           LOC = L7 | IOSTANDARD = "LVCMOS33";         ## VGA B4
+NET vga_out_b<3>           LOC = N8 | IOSTANDARD = "LVCMOS33";         ## VGA B3
+NET vga_out_b<2>           LOC = P8 | IOSTANDARD = "LVCMOS33";         ## VGA B2
+NET vga_out_b<1>           LOC = M7 | IOSTANDARD = "LVCMOS33";         ## VGA B1
+NET vga_out_b<0>           LOC = P7 | IOSTANDARD = "LVCMOS33";         ## VGA B0
+
+NET vga_out_vs             LOC = L13 | IOSTANDARD = "LVCMOS33";        ## VGA VS
+NET vga_out_hs             LOC = M14 | IOSTANDARD = "LVCMOS33";        ## VGA HS  

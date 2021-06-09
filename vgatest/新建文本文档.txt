@@ -1,0 +1,40 @@
+always@(*)
+begin
+	   case(led)	
+      8'b00000001:begin
+			x_offset <= 12'd0;
+			y_offset <= 12'd0;
+		   end
+		 8'b00000010:begin
+		  x_offset <= 12'd128;
+			y_offset <= 12'd0;
+			end
+		  8'b00000100:begin
+		   x_offset <= 12'd256;
+			y_offset <= 12'd0;
+			end
+		  8'b00001000:begin
+		   x_offset <= 12'd384;
+			y_offset <= 12'd0;
+			end
+		  8'b00010000:begin
+			x_offset <= 12'd0;
+			y_offset <= 12'd256;
+		   end
+		  8'b00100000:begin
+		   x_offset <= 12'd128;
+			y_offset <= 12'd256;
+			end
+		  8'b01000000:begin
+		   x_offset <= 12'd256;
+			y_offset <= 12'd256;
+			end
+		  8'b10000000:begin
+		   x_offset <= 12'd384;
+			y_offset <= 12'd256;
+			end
+		  8'b00000000:begin
+		   x_offset <= 12'd2000;
+			end
+		endcase
+end

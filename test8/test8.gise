@@ -167,10 +167,9 @@
       <outfile xil_pn:name="top_game_pad.txt"/>
       <outfile xil_pn:name="top_game_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1622442046" xil_pn:in_ck="6038225837387747983" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="396117104113915555" xil_pn:start_ts="1622442038">
+    <transform xil_pn:end_ts="1622961518" xil_pn:in_ck="6038225837387747983" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1622961510">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="top_game.bgn"/>
       <outfile xil_pn:name="top_game.bit"/>
@@ -179,6 +178,10 @@
       <outfile xil_pn:name="usage_statistics_webtalk.html"/>
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1622961523" xil_pn:in_ck="6038225837387735129" xil_pn:name="TRAN_impactProgrammingTool" xil_pn:prop_ck="2682241697568822907" xil_pn:start_ts="1622961523">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1622442031" xil_pn:in_ck="130550810871251443" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1622442026">
       <status xil_pn:value="SuccessfullyRun"/>
